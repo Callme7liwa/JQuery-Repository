@@ -1,0 +1,56 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="container">
+        <input type="text" class="txtb col-md-9 "  placeholder="add a task">
+        <div class="notcomp">
+            <h3> not completed</h3>
+           
+        </div>
+        <div class="comp">
+            <h3> completed </h3>
+            
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(".txtb").on("keyup",function(e){
+            if(e.keyCode == 13 && $(".txtb").val() !="")
+            {
+                var task=$("<div class='task'> </div>").text($(".txtb").val());
+                var check=$("<i class='fa fa-check'></i>").click(function(){
+                    var p =$(this).parent();
+                    p.fadeOut(function(){
+                        $(".comp").append(p);
+                        p.fadeIn();
+                    })
+                    p.remove();
+                });
+
+                var trash=$("<i class='fa fa-trash-o'></i>").click(function(){
+                    var p = $(this).parent();
+                    p.fadeOut(function(){
+                        p.remove();
+                    })
+                });
+                task.append(trash);
+                task.append(check);
+                $(".notcomp").append(task);
+                $(".txtb").val('');
+            }
+        })
+    </script>
+    
+</body>
+</html>

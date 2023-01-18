@@ -1,0 +1,73 @@
+*{
+    margin:0 ;
+    padding:0:
+}
+
+body {
+    background-color: #000000;
+    background-image: linear-gradient(147deg, #000000 0%, #04619f 74%);
+    min-height: 100vh ;
+}
+
+.container {
+    max-width: 800px;
+    margin:auto;
+    padding: 10px;
+}
+
+.txtb{
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-bottom: 2px solid green;
+    color: white;
+    padding: 10px;
+    transition: all 0.7s ease;
+}
+
+.txtb:focus {
+    border-bottom: 2px solid red;
+
+}
+
+.notcomp , 
+.comp {
+    width: 100%;
+    margin-top:4vh ;
+}
+
+.notcomp  h3 ,
+.comp h3 {
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+.task {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    color: white;
+    background-color: indianred;
+    border-radius: 5px;
+}
+
+.comp .task {
+    background-color: green ; 
+}
+.task i {
+    position: relative;
+    float: right;
+    margin-left: 10px;
+    cursor: pointer;
+    color: default;
+    transition: all 0.7s ease;
+}
+
+.task .fa-trash-o:hover {
+    color: red;
+}
+
+.task .fa-check:hover {
+    color: green;
+}

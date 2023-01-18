@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">   
+<title>Document</title>
+</head>
+<body>
+    <div class="card">
+        <div class="content">
+            <div class="imgBx">
+                <img width="60px" src="img2.jpg">
+            </div>
+            <h2> Ayoub Sghir  <br> <span> Software Engineer</span></h2>
+        </div>
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-home"></i></span>
+                        <span class="title"> Home </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-comment"></i></span>
+                        <span class="title"> Message </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-refresh"></i></span>
+                        <span class="title"> Update </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-sign-out"></i></span>
+                        <span class="title"> Logout </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="toggle" >
+            <i class="fa fa-caret-down" onclick='toggleFunction();'></i>
+        </div>
+    </div>
+
+    <script>
+        // var val=0 ; 
+        // $(document).ready(function(){
+        //     $('.toggle').click(function(){
+        //         if(val==0) { $('.navigation').fadeOut(200);
+        //             val=1 ; 
+        //             $(this).find('i').attr('class','fa fa-home')
+        //        }
+               
+        //         else if(val==1)
+        //         {
+        //             $('.navigation').fadeIn(200);
+        //             val=0 ; 
+        //             $(this).find('i').attr('class','fa fa-caret-down')
+                
+        //         }
+        //     })
+        // })
+
+        
+            function toggleFunction()
+            {
+                
+                const card = document.querySelector('.card');
+                
+                const cardtoggle = document.querySelector('.toggle');
+                card.classList.toggle('active');
+                cardtoggle.classList.toggle('active');
+                
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
